@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>base</title>
+</head>
+<body>
+<h2>Taskflow</h2>
+<a href="{{url_for('index')}}">Início</a>
+<a href="{{url_for('criar_atividades')}}">Criar atividades</a>
+<a href="{{url_for('listar_atividades')}}">Listar atividades</a>
+<a href="{{url_for('pessoa')}}">Pessoa</a>
+
+{% block conteudo %}
+{% endblock conteudo %}
+</body>
+</html>

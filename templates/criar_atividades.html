@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block conteudo %}
+
+<h1>Criar atividades</h1>
+<br>
+
+<label>Recursos:</label>
+<br>
+<form action="{{url_for('criar_atividades')}}" method="post">
+    <input type="checkbox" name="form_recurso" value="net">Internet
+    <input type="checkbox" name="form_recurso" value="cel">Celular
+    <input type="checkbox" name="form_recurso" value="not">Notebook
+    <input type="checkbox" name="form_recurso" value="a4">Papel
+    <input type="checkbox" name="form_recurso" value="pen">Caneta
+    <br>
+    <br>
+<label>
+    Nome da atividade:
+    <input name="form_nome" type="text"required>
+</label>
+
+<br>
+<br>
+
+<label>
+    Data:
+    <input name="form_data" type="date" required>
+</label>
+
+<br>
+<br>
+
+<label>Categoria:</label>
+<br>
+    <input type="checkbox" name="form_categoria" value="net">Lazer
+    <input type="checkbox" name="form_categoria" value="cel">Jurídico
+    <input type="checkbox" name="form_categoria" value="not">Palestra
+    <input type="checkbox" name="form_categoria" value="not">Escolar
+<br>
+<label>
+        Prioridade:
+        <select name="form_PRI" required>
+            <option value="Nao_importante">Não importante</option>
+            <option value="Intermediario">Intermediário</option>
+            <option value="Importante">Importante</option>
+        </select>
+</label>
+
+<br>
+<br>
+
+  <label>
+      Descrição da atividade:
+    <br>
+    <textarea rows="10" cols="50" required> </textarea>
+  </label>
+
+<br>
+<br>
+ <button type="submit">Enviar formulário</button>
+ <button type="reset">Limpar formulário</button>
+
+</form>
+    {{dados_atividade}}
+    {% for atividade in dados_atividade %}
+    {{atividade.nome}}<br>
+    {{atividade.recurso}}<br>
+    {{atividade.categoria}}<br>
+    {{atividade.prioridade}}<br>
+    {{atividade.descricao}}<br>
+    {% endfor %}
+
+
+{% endblock conteudo %}
