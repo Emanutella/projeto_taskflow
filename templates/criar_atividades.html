@@ -1,16 +1,17 @@
 {% extends "base.html" %}
 {% block conteudo %}
+<div class="criar">
 <h1>Criar atividades</h1>
 <br>
-<img src="https://pngimg.com/uploads/pusheen/pusheen_PNG32.png" width="250" height="250" >
 <label>Recursos:</label>
 <br>
+
 <form action="{{url_for('criar_atividades')}}" method="post">
-    <input type="checkbox" name="form_recurso" value="net">Internet
-    <input type="checkbox" name="form_recurso" value="cel">Celular
-    <input type="checkbox" name="form_recurso" value="not">Notebook
-    <input type="checkbox" name="form_recurso" value="a4">Papel
-    <input type="checkbox" name="form_recurso" value="pen">Caneta
+    <input type="checkbox" name="form_recurso" value="Internet">Internet
+    <input type="checkbox" name="form_recurso" value="Celular">Celular
+    <input type="checkbox" name="form_recurso" value="Notebook">Notebook
+    <input type="checkbox" name="form_recurso" value="Papel">Papel
+    <input type="checkbox" name="form_recurso" value="Caneta">Caneta
     <br>
     <br>
 <label>
@@ -31,10 +32,10 @@
 
 <label>Categoria:</label>
 <br>
-    <input type="checkbox" name="form_categoria" value="net">Lazer
-    <input type="checkbox" name="form_categoria" value="cel">Jurídico
-    <input type="checkbox" name="form_categoria" value="not">Palestra
-    <input type="checkbox" name="form_categoria" value="not">Escolar
+    <input type="checkbox" name="form_categoria" value="Lazer">Lazer
+    <input type="checkbox" name="form_categoria" value="Juridico">Jurídico
+    <input type="checkbox" name="form_categoria" value="Palestra">Palestra
+    <input type="checkbox" name="form_categoria" value="Escolar">Escolar
 <br>
 <label>
         Prioridade:
@@ -60,14 +61,8 @@
  <button type="reset">Limpar formulário</button>
 
 </form>
-    {{dados_atividade}}
-    {% for atividade in dados_atividade %}
-    {{atividade.nome}}<br>
-    {{atividade.recurso}}<br>
-    {{atividade.categoria}}<br>
-    {{atividade.prioridade}}<br>
-    {{atividade.descricao}}<br>
-    {% endfor %}
+</div>
+
 
 
 {% endblock conteudo %}

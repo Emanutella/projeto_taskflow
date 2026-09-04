@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>base</title>
+    <link rel="stylesheet" href="../static/css/taskflow.css">
 </head>
 <body>
-<h2>Taskflow</h2>
-<a href="{{url_for('index')}}">Início</a>
-<a href="{{url_for('criar_atividades')}}">Criar atividades</a>
-<a href="{{url_for('listar_atividades')}}">Listar atividades</a>
-<a href="{{url_for('pessoa')}}">Pessoa</a>
+<div class="pai">
+    <div class="taskflow">
+       ⏔⏔⏔⏔⏔⏔ Taskflow Corp ⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔⏔
+    </div>
+    <div class="navegador">
+    <a href="{{url_for('index')}}">Início</a>
+    <a href="{{url_for('criar_atividades')}}">Criar atividades</a>
+    <a href="{{url_for('listar_atividades')}}">Listar atividades</a>
+    <a href="{{url_for('pessoa')}}">Pessoa</a>
+</div>
+</div>
+
 
 {% block conteudo %}
 {% endblock conteudo %}

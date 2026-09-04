@@ -34,7 +34,7 @@ def criar_atividades():
     return render_template ('criar_atividades.html')
 @app.route('/atividades/listar')
 def listar_atividades():
-    return render_template ('listar_atividades.html')
+    return render_template ('listar_atividades.html',dados_atividade=base_fake)
 
 @app.route('/pessoa')
 def pessoa():
@@ -42,5 +42,5 @@ def pessoa():
 
 #iniciar aplicação web
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=8080)
 #nada deve ser colocado abaixo

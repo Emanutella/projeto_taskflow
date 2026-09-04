@@ -1,6 +1,20 @@
 {% extends "base.html" %}
 {% block conteudo %}
 
-<h1>Listar atividades</h1>
-
+<div class="lista">
+    <h1>Listar atividades</h1>
+    <p>As atividades cadastradas serão listadas abaixo</p>
+    <br>
+    <br>
+    {% for atividade in dados_atividade %}
+    <p> Nome da atividade: </p>
+    {{atividade.nome}}<br>
+    <p> Recurso necessário: </p>
+    {{atividade.recurso}}<br>
+    <p> Categoria: </p>
+    {{atividade.categoria}}<br>
+    <p> Prioridade: </p>
+    {{atividade.prioridade}}<br>
+    {% endfor %}
+</div>
 {% endblock conteudo %}
